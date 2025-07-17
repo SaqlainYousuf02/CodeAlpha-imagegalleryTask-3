@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery - CodeAlpha Task 1</title>
+ <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <h1 class="title">📸 My Image Gallery</h1>
+
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <img src="assets\image\citypic.jpg" class="gallery-img nature" onclick="openLightbox(this)" alt="Image 1"/>
+    <img src="assets\image\dreamstime.webp" class="gallery-img city" onclick="openLightbox(this)" alt="Image 2"/>
+    <img src="assets\image\mehel.jpg" class="gallery-img nature" onclick="openLightbox(this)" alt="Image 3"/>
+    <img src="assets\image\roads.jpg" class="gallery-img city" onclick="openLightbox(this)" alt="Image 4"/>
+    <img src="assets\image\brig.jpg" class="gallery-img nature" onclick="openLightbox(this)" alt="Image 5"/>
+    <img src="assets\image\roads.jpg" class="gallery-img city" onclick="openLightbox(this)" alt="Image 6"/>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

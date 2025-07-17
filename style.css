@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #bfc6e9;
+  text-align: center;
+}
+
+.title {
+  margin-top: 20px;
+  color: #333;
+}
+
+.filters {
+  margin: 20px;
+}
+
+.filters button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  background-color: #008cba;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background-color: #005f73;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.gallery-img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  filter: brightness(80%);
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: rgb(193, 191, 191);
+  cursor: pointer;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: rgb(191, 190, 190);
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+@media (max-width: 600px) {
+  .gallery-img {
+    width: 90%;
+    height: auto;
+  }
+}
